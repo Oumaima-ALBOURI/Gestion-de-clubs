@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title> Inscription </title>
+        <link rel="icon" type="image/x-ico" href="favicon2.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form method="post" action="traitement-données.php" target="_blank">
+            <fieldset>
+            <legend><h1>Inscription aux Clubs Étudiants:</h1> </legend>
+            <p><strong>1.Votre informations personelles:</strong></p><br>
+            <div>
+            <label for="Nom"> Nom:&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" name="Nom" placeholder="Saisir votre nom" id="Nom"  required autofocus/><br><br>
+            </div>
+            <div>
+            <label for="Prenom"> Prenom:&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" name="Prenom" placeholder="Saisir votre prenom" id="Prenom"required /><br><br>
+            </div>
+            <div>
+            <label for="Email"> Email Academique:&nbsp;&nbsp;&nbsp; </label>
+            <input type="email" name="Email" placeholder="Saisir votre Email Academique" pattern=".+uca\.ma$" title="L'email doit finir par uca.ma" id="Email" required/><br><br>
+            </div>
+            <div>
+            <label for="CNE"> CNE:&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" name="CNE" placeholder="Saisir votre Code National de l'Étudiant" pattern="[A-Z]{1,2}[0-9]{8,9}"  maxlength="10" id="CNE"  required /><br><br>
+            </div>
+            <div>
+            <label for="Telephone"> Telephone:&nbsp;&nbsp;&nbsp; </label>
+            <input type="tel" name="Telephone" placeholder="06.12.13.14.15" pattern="0[5-7][0-9]{8}" maxlength="10" id="Telephone" required/><br><br>
+            </div>
+            <p><strong>2.Votre informations académiques:</strong></p><br>
+            <div>
+            <label for="Filière"> Filière:&nbsp;&nbsp;&nbsp; </label>
+            <select name="Filière" id="Filière"> 
+              <option value="Mathématiques">Mathématiques</option>
+              <option value="Informatique"> Informatique</option>
+              <option value="Sciences de la Vie et de la Terre"> SVT</option>
+              <option value="Physique-Chimie" > Physique-Chimie</option>
+              <option value="Français" >Français</option>
+              <option value="Anglais">Anglais </option>
+              <option value="Arabe" >Arabe </option>
+              <option value="Histoire-Géographie" >Histoire-Géographie</option>
+              <option value="Philosophie" >Philosophie</option>
+              <option value="Éducation Physique et Sportive" >EPS</option>
+              <option value="Enseignement primaire" >Enseignement primaire</option>
+            </select><br><br>
+            </div>
+            <div>
+            <label for="Année de étude"> Année de étude:&nbsp;&nbsp;&nbsp; </label>
+            <select name="Année de étude" id="Année de étude"> 
+              <optgroup label="1ère année">
+              <option value="Semestre 1">S1</option>
+              <option value="Semestre 2">S2 </option>
+              </optgroup>
+              <optgroup label="2ème année">
+              <option value="Semestre 3"> S3</option>
+              <option value="Semestre 4">S4</option>
+              </optgroup>
+              <optgroup label="3ème année">
+              <option value="Semestre 5">S5 </option>
+              <option value="Semestre 6">S6 </option>
+              </optgroup>
+            </select><br><br>
+            </div>
+              <p><strong>3.Dans quel club souhaitez-vous vous inscrire ?</strong></p><br>
+              <div><input type="radio" name="Club" value="BRIDGE ENS"  id="BRIDGE ENS"  /><label for="BRIDGE ENS">Club Bridge ens</label></div>
+              <div><input type="radio" name="Club" value=" ENACTUS"  id=" ENACTUS"  /><label for="ENACTUS">Club Enactus</label></div>
+              <div><input type="radio" name="Club" value="INTELLIGENCE ARTIFICIELLE"  id="INTELLIGENCE ARTIFICIELLE"  /><label for="INTELLIGENCE ARTIFICIELLE">Club d'intelligence artificielle</label></div>
+              <div><input type="radio" name="Club" value="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE"  id="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE"  /><label for="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE">Club d'enseignement inclusif et responsabilité sociale</label></div>
+              <div><input type="radio" name="Club" value="ECHECS"  id="ECHECS"  /><label for="ECHECS">Club d'echecs</label></div>
+              <div><input type="radio" name="Club" value="AGORA"  id="AGORA"  /><label for="AGORA">Club Agora </label></div>
+              <div><input type="radio" name="Club" value="SANTE ET ENVIRONNEMENT"  id="SANTE ET ENVIRONNEMENT"  /><label for=" SANTE ET ENVIRONNEMENT"> Club de la Sante et l'Environnement</label></div>
+              <div><input type="radio" name="Club" value="Les Amis de l'École Publique"  id="Les Amis de l'École Publique"  /><label for="Les Amis de l'École Publique">Club Des Amis de l'École Publique</label></div>
+              <div><input type="radio" name="Club" value="EMPOWERMENT EDUCATION ENS-UCA"  id="EMPOWERMENT EDUCATION ENS-UCA"  /><label for="EMPOWERMENT EDUCATION ENS-UCA">Club d'empowerment education ens-uca</label></div>
+              <div><input type="radio" name="Club" value="LEADERSHIP AND ENTERTAINMENT"  id="LEADERSHIP AND ENTERTAINMENT"  /><label for=" LEADERSHIP AND ENTERTAINMENT">Club leadership and entertainment</label></div>
+              <div><input type="radio" name="Club" value=" entrepreneuriat"  id="entrepreneuriat"  /><label for="entrepreneuriat">Club d'entrepreneuriat</label></div>
+              <div><input type="radio" name="Club" value="Thespians"  id="Thespians"  /><label for="Thespians">Club de Thespians</label></div>
+              <div><input type="radio" name="Club" value="E-TEAM"  id="E-TEAM"  /><label for="E-TEAM">Club E-TEAM</label></div>
+              <div><input type="radio" name="Club" value="DIGITAL CRAFT"  id="DIGITAL CRAFT"  /><label for="DIGITAL CRAFT">Club de Digital Craft </label></div>
+              <div><input type="radio" name="Club" value="Digital Agraphia"  id="Digital Agraphia"  /><label for="Digital Agraphia">Club de Digital Agraphia</label></div>
+              <div><input type="radio" name="Club" value="VIRIDIS'U"  id="VIRIDIS'U"  /><label for="VIRIDIS'U">Club VIRIDIS'U</label></div>
+              <br>
+              <p><strong>4. Pourquoi êtes-vous intéressé à rejoindre ce club ?</strong></p>
+              <textarea rows="5" cols="45"></textarea><br><br>
+              <p><strong>5. Quelles compétences ou qualités pouvez-vous apporter au club? </strong></p>
+              <textarea rows="5" cols="60"></textarea><br><br>
+              <p><strong>6. Êtes-vous prêt à vous engager à assister régulièrement aux réunions et aux événements du club ? </strong></p>
+              <div><input type="radio" name="Choix" value="Oui"  id="Oui"  /><label for="Oui">Oui</label></div>
+              <div><input type="radio" name="Choix" value="Non"  id="Non"  /><label for="Non">Non</label></div>
+              <br>
+              <button type="submit" > Envoyer </button>&nbsp;&nbsp;&nbsp;
+              <button type="reset" > Annuler </button>        
+            </fieldset>      
+        </form>
+    </body>
