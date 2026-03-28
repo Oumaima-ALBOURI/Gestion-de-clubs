@@ -7,35 +7,41 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <form method="post" action="traitement-données.php" target="_blank">
-            <fieldset>
-            <legend><h1>Inscription aux Clubs Étudiants:</h1> </legend>
+    <body class="bg-light"> 
+    <div class="container mt-5 mb-5">
+      <div class="card shadow p-4 bg-transparent">
+        <form class="needs-validation" method="post" action="traitement-données.php" target="_blank" novalidate>
+          <fieldset>
+
+            <div class="text-center mb-4">
+            <h1 class="fw-bold text-dark">Inscription aux Clubs Étudiants</h1>
+            </div>
+
             <p><strong>1.Votre informations personelles:</strong></p><br>
-            <div>
-            <label for="Nom"> Nom:&nbsp;&nbsp;&nbsp; </label>
-            <input type="text" name="Nom" class="form-control" placeholder="Saisir votre nom" id="Nom"  required autofocus/><br><br>
+            <div class="mb-3">
+            <label for="Nom" class="form-label"> Nom:&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" name="Nom"  placeholder="Saisir votre nom" id="Nom"  required autofocus/><br><br>
             </div>
-            <div>
-            <label for="Prenom"> Prenom:&nbsp;&nbsp;&nbsp; </label>
-            <input type="text" name="Prenom" class="form-control" placeholder="Saisir votre prenom" id="Prenom"required /><br><br>
+            <div class="mb-3">
+            <label for="Prenom" class="form-label"> Prenom:&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" name="Prenom"  placeholder="Saisir votre prenom" id="Prenom"required /><br><br>
             </div>
-            <div>
-            <label for="Email"> Email Academique:&nbsp;&nbsp;&nbsp; </label>
-            <input type="email" name="Email" class="form-control" placeholder="Saisir votre Email Academique" pattern=".+uca\.ma$" title="L'email doit finir par uca.ma" id="Email" required/><br><br>
+            <div class="mb-3">
+            <label for="Email" class="form-label"> Email Academique:&nbsp;&nbsp;&nbsp; </label>
+            <input type="email" name="Email"  placeholder="Saisir votre Email Academique" pattern=".+uca\.ma$" title="L'email doit finir par uca.ma" id="Email" required/><br><br>
             </div>
-            <div>
-            <label for="CNE"> CNE:&nbsp;&nbsp;&nbsp; </label>
-            <input type="text" name="CNE" class="form-control" placeholder="Saisir votre Code National de l'Étudiant" pattern="[A-Z]{1,2}[0-9]{8,9}"  maxlength="10" id="CNE"  required /><br><br>
+            <div class="mb-3">
+            <label for="CNE" class="form-label"> CNE:&nbsp;&nbsp;&nbsp; </label>
+            <input type="text" name="CNE"  placeholder="Ex: EE134526" pattern="[A-Z]{1,2}[0-9]{6,9}" maxlength="11" id="CNE" required  /><br><br>
             </div>
-            <div>
-            <label for="Telephone"> Telephone:&nbsp;&nbsp;&nbsp; </label>
-            <input type="tel" name="Telephone" class="form-control" placeholder="06.12.13.14.15" pattern="0[5-7][0-9]{8}" maxlength="10" id="Telephone" required/><br><br>
+            <div class="mb-3">
+            <label for="Telephone" class="form-label"> Telephone:&nbsp;&nbsp;&nbsp; </label>
+            <input type="tel" name="Telephone"  placeholder="06.12.13.14.15" pattern="0[5-7][0-9]{8}" maxlength="10" id="Telephone" required/><br><br>
             </div>
             <p><strong>2.Votre informations académiques:</strong></p><br>
-            <div>
-            <label for="Filière"> Filière:&nbsp;&nbsp;&nbsp; </label>
-            <select name="Filière" id="Filière" class="form-select"> 
+            <div class="mb-3">
+            <label for="Filière" class="form-label"> Filière:&nbsp;&nbsp;&nbsp; </label>
+            <select name="Filière" id="Filière" > 
               <option value="Mathématiques">Mathématiques</option>
               <option value="Informatique"> Informatique</option>
               <option value="Sciences de la Vie et de la Terre"> SVT</option>
@@ -49,9 +55,9 @@
               <option value="Enseignement primaire" >Enseignement primaire</option>
             </select><br><br>
             </div>
-            <div>
-            <label for="Année de étude"> Année de étude:&nbsp;&nbsp;&nbsp; </label>
-            <select name="Année de étude" id="Année de étude" class="form-select"> 
+            <div class="mb-3">
+            <label for="Année de étude" class="form-label"> Année de étude:&nbsp;&nbsp;&nbsp; </label>
+            <select name="Année de étude" id="Année de étude"> 
               <optgroup label="1ère année">
               <option value="Semestre 1">S1</option>
               <option value="Semestre 2">S2 </option>
@@ -64,37 +70,79 @@
               <option value="Semestre 5">S5 </option>
               <option value="Semestre 6">S6 </option>
               </optgroup>
-            </select><br><br>
+            </select>
             </div>
               <p><strong>3.Dans quel club souhaitez-vous vous inscrire ?</strong></p><br>
-              <div><input type="radio" name="Club" value="BRIDGE ENS"  id="BRIDGE ENS" class="form-check-input" /><label for="BRIDGE ENS">Club Bridge ens</label></div>
-              <div><input type="radio" name="Club" value=" ENACTUS"  id=" ENACTUS" class="form-check-input" /><label for="ENACTUS">Club Enactus</label></div>
-              <div><input type="radio" name="Club" value="INTELLIGENCE ARTIFICIELLE"  id="INTELLIGENCE ARTIFICIELLE" class="form-check-input" /><label for="INTELLIGENCE ARTIFICIELLE">Club d'intelligence artificielle</label></div>
-              <div><input type="radio" name="Club" value="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE"  id="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE" class="form-check-input" /><label for="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE">Club d'enseignement inclusif et responsabilité sociale</label></div>
-              <div><input type="radio" name="Club" value="ECHECS"  id="ECHECS" class="form-check-input" /><label for="ECHECS">Club d'echecs</label></div>
-              <div><input type="radio" name="Club" value="AGORA"  id="AGORA" class="form-check-input" /><label for="AGORA">Club Agora </label></div>
-              <div><input type="radio" name="Club" value="SANTE ET ENVIRONNEMENT"  id="SANTE ET ENVIRONNEMENT" class="form-check-input" /><label for=" SANTE ET ENVIRONNEMENT"> Club de la Sante et l'Environnement</label></div>
-              <div><input type="radio" name="Club" value="Les Amis de l'École Publique"  id="Les Amis de l'École Publique" class="form-check-input" /><label for="Les Amis de l'École Publique">Club Des Amis de l'École Publique</label></div>
-              <div><input type="radio" name="Club" value="EMPOWERMENT EDUCATION ENS-UCA"  id="EMPOWERMENT EDUCATION ENS-UCA" class="form-check-input" /><label for="EMPOWERMENT EDUCATION ENS-UCA">Club d'empowerment education ens-uca</label></div>
-              <div><input type="radio" name="Club" value="LEADERSHIP AND ENTERTAINMENT"  id="LEADERSHIP AND ENTERTAINMENT" class="form-check-input" /><label for=" LEADERSHIP AND ENTERTAINMENT">Club leadership and entertainment</label></div>
-              <div><input type="radio" name="Club" value=" entrepreneuriat"  id="entrepreneuriat" class="form-check-input" /><label for="entrepreneuriat">Club d'entrepreneuriat</label></div>
-              <div><input type="radio" name="Club" value="Thespians"  id="Thespians" class="form-check-input" /><label for="Thespians">Club de Thespians</label></div>
-              <div><input type="radio" name="Club" value="E-TEAM"  id="E-TEAM" class="form-check-input" /><label for="E-TEAM">Club E-TEAM</label></div>
-              <div><input type="radio" name="Club" value="DIGITAL CRAFT"  id="DIGITAL CRAFT" class="form-check-input" /><label for="DIGITAL CRAFT">Club de Digital Craft </label></div>
-              <div><input type="radio" name="Club" value="Digital Agraphia"  id="Digital Agraphia" class="form-check-input" /><label for="Digital Agraphia">Club de Digital Agraphia</label></div>
-              <div><input type="radio" name="Club" value="VIRIDIS'U"  id="VIRIDIS'U" class="form-check-input" /><label for="VIRIDIS'U">Club VIRIDIS'U</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="BRIDGE ENS"  id="BRIDGE ENS" class="form-check-input" required /><label class="form-check-label" for="BRIDGE ENS">Club Bridge ens</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="ENACTUS"  id="ENACTUS" class="form-check-input" /><label class="form-check-label" for="ENACTUS">Club Enactus</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="INTELLIGENCE ARTIFICIELLE"  id="INTELLIGENCE ARTIFICIELLE" class="form-check-input" /><label class="form-check-label" for="INTELLIGENCE ARTIFICIELLE">Club d'intelligence artificielle</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE"  id="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE" class="form-check-input" /><label class="form-check-label" for="ENSEIGNEMENT INCLUSIF ET RESPONSABILITE SOCIALE">Club d'enseignement inclusif et responsabilité sociale</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="ECHECS"  id="ECHECS" class="form-check-input" /><label class="form-check-label" for="ECHECS">Club d'echecs</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="AGORA"  id="AGORA" class="form-check-input" /><label class="form-check-label" for="AGORA">Club Agora </label></div>
+              <div class="form-check"><input type="radio" name="Club" value="SANTE ET ENVIRONNEMENT"  id="SANTE ET ENVIRONNEMENT" class="form-check-input" /><label class="form-check-label" for=" SANTE ET ENVIRONNEMENT"> Club de la Sante et l'Environnement</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="Les Amis de l'École Publique"  id="Les Amis de l'École Publique" class="form-check-input" /><label class="form-check-label" for="Les Amis de l'École Publique">Club Des Amis de l'École Publique</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="EMPOWERMENT EDUCATION ENS-UCA"  id="EMPOWERMENT EDUCATION ENS-UCA" class="form-check-input" /><label class="form-check-label" for="EMPOWERMENT EDUCATION ENS-UCA">Club d'empowerment education ens-uca</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="LEADERSHIP AND ENTERTAINMENT"  id="LEADERSHIP AND ENTERTAINMENT" class="form-check-input" /><label class="form-check-label" for=" LEADERSHIP AND ENTERTAINMENT">Club leadership and entertainment</label></div>
+              <div class="form-check"><input type="radio" name="Club" value=" entrepreneuriat"  id="entrepreneuriat" class="form-check-input" /><label class="form-check-label" for="entrepreneuriat">Club d'entrepreneuriat</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="Thespians"  id="Thespians" class="form-check-input" /><label class="form-check-label" for="Thespians">Club de Thespians</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="E-TEAM"  id="E-TEAM" class="form-check-input" /><label class="form-check-label" for="E-TEAM">Club E-TEAM</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="DIGITAL CRAFT"  id="DIGITAL CRAFT" class="form-check-input" /><label class="form-check-label" for="DIGITAL CRAFT">Club de Digital Craft </label></div>
+              <div class="form-check"><input type="radio" name="Club" value="Digital Agraphia"  id="Digital Agraphia" class="form-check-input" /><label class="form-check-label" for="Digital Agraphia">Club de Digital Agraphia</label></div>
+              <div class="form-check"><input type="radio" name="Club" value="VIRIDIS'U"  id="VIRIDIS'U" class="form-check-input" /><label class="form-check-label" for="VIRIDIS'U">Club VIRIDIS'U</label></div>
               <br>
               <p><strong>4. Pourquoi êtes-vous intéressé à rejoindre ce club ?</strong></p>
-              <textarea class="form-control" rows="5" cols="45"></textarea><br><br>
+              <textarea  rows="5" cols="45"></textarea><br><br>
               <p><strong>5. Quelles compétences ou qualités pouvez-vous apporter au club? </strong></p>
-              <textarea class="form-control" rows="5" cols="60"></textarea><br><br>
+              <textarea  rows="5" cols="60"></textarea><br><br>
               <p><strong>6. Êtes-vous prêt à vous engager à assister régulièrement aux réunions et aux événements du club ? </strong></p>
-              <div><input type="radio" name="Choix" value="Oui"  id="Oui" class="form-check-input" /><label for="Oui">Oui</label></div>
-              <div><input type="radio" name="Choix" value="Non"  id="Non" class="form-check-input" /><label for="Non">Non</label></div>
+              <div><input type="radio" name="Choix" value="Oui"  id="Oui" class="form-check-input" /><label for="Oui"> Oui</label></div>
+              <div><input type="radio" name="Choix" value="Non"  id="Non" class="form-check-input" /><label for="Non"> Non</label></div>
               <br>
-              <button type="submit" class="btn btn-success"> Envoyer </button>&nbsp;&nbsp;&nbsp;
-              <button type="reset" class="btn btn-danger"> Annuler </button>        
-            </fieldset>      
+              <button type="submit" class="btn btn-success "> Envoyer </button>&nbsp;&nbsp;&nbsp;
+              <button type="reset" class="btn btn-danger "> Annuler </button>        
+          </fieldset>      
         </form>
+      </div>
+        <script>
+// On attend que toute la page HTML soit chargée avant de lancer le script
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // On récupère le formulaire qui a la classe "needs-validation"
+    var form = document.querySelector('.needs-validation');
+
+    // On écoute l'événement "submit" (quand l'utilisateur clique sur Envoyer)
+    form.addEventListener('submit', function(event) {
+        
+        // 1. VERIFICATION : On vérifie si tous les champs obligatoires sont remplis
+        if (!form.checkValidity()) {
+            
+            // Si c'est vide : on bloque l'envoi du formulaire
+            event.preventDefault();
+            event.stopPropagation();
+            
+            // On affiche un message d'erreur à l'écran
+            alert("Erreur : Veuillez remplir tous les champs et choisir un club !");
+            
+        } else {
+            // 2. SAUVEGARDE (LocalStorage) : Si tout est bon, on enregistre les données
+            
+            // On récupère le texte du nom et la valeur du bouton radio coché (club)
+            var nomEtudiant = document.getElementById('Nom').value;
+            var clubChoisi = document.querySelector('input[name="Club"]:checked').value;
+
+            // On stocke ces informations dans la mémoire du navigateur (LocalStorage)
+            localStorage.setItem('nom', nomEtudiant);
+            localStorage.setItem('club', clubChoisi);
+
+            // On confirme à l'utilisateur que c'est bien enregistré
+            alert("Succès ! " + nomEtudiant + ", votre inscription au club " + clubChoisi + " a été sauvegardée.");
+        }
+
+        // 3. STYLE BOOTSTRAP : On ajoute la classe qui colorie les cases en ROUGE ou VERT
+        form.classList.add('was-validated');
+        
+    }, false);
+});
+</script>
     </body>
 </html>
