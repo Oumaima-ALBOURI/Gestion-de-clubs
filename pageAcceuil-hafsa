@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-ico" href="favicon1.ico">
+<title>Clubs Universitaires</title>
+
+<style>
+
+header {
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TITRE PRINCIPAL */
+header h1 {
+  margin: 0;
+  font-size: 3.5em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  animation: fadeIn 1.5s ease;
+}
+
+/* SOUS-TITRE */
+header p {
+  font-size: 1.2em;
+  margin-top: 15px;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   SECTION CLUBS
+   ========================= */
+
+.clubs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+}
+
+/* =========================
+   CARTE CLUB
+   ========================= */
+
+.club-card {
+  background: white;
+  width: 260px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.club-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Conteneur image fixe — évite les déformations */
+.club-card .img-wrapper {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.club-card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom doux sur l'image au survol */
+.club-card:hover .img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Emoji affiché si l'image ne charge pas */
+.club-card .img-wrapper .emoji-placeholder {
+  font-size: 3.5em;
+  display: none;
+}
+
+/* TITRE */
+.club-card h3 {
+  color: linear-gradient(135deg, #60a5fa, #34d399);
+  margin: 12px 10px 4px;
+  font-size: 1em;
+}
+
+/* DESCRIPTION */
+.club-card p {
+  font-size: 14px;
+  color: #555;
+  padding: 0 14px;
+  margin-bottom: 4px;
+}
+
+/* BOUTON */
+.club-card a.btn {
+  display: inline-block;
+  margin: 10px 0 16px;
+  padding: 8px 22px;
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-size: 0.9em;
+}
+
+.club-card a.btn:hover {
+  opacity: 0.85;
+  transform: scale(1.04);
+}
+
+/* =========================
+   SECTION INFO
+   ========================= */
+
+.why {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f1f5f9;
+}
+
+.why h2 {
+  color:linear-gradient(135deg, #60a5fa, #34d399);
+  font-size: 1.7em;
+  margin-bottom: 12px;
+}
+
+.why p {
+  max-width: 600px;
+  margin: auto;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  background: linear-gradient(135deg, #60a5fa, #34d399);
+  color: white;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 250px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Clubs Universitaires</h1>
+  <p>Explore les clubs, développe tes compétences et rejoins une communauté dynamique</p>
+</header>
+
+<div class="clubs-container">
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/Sport.jfif" alt="Club Sportif"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club Sportif</h3>
+    <p>Football, basketball, tennis... Rejoins des équipes, participe à des tournois et garde la forme tout en te faisant des amis.</p>
+    <a href="inscription.html?club=Sportif " class="btn" target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/ai.jfif" alt="Club IA"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club d'Intelligence Artificielle</h3>
+    <p>Machine learning, ChatGPT, data science... Explore les technologies qui transforment le monde et prépare-toi aux métiers de demain.</p>
+    <a href="inscription.html?club=IA" class="btn" target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/solidarite.jfif" alt="Club Solidarité"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club de Solidarité</h3>
+    <p>Bénévolat, collectes, visites sociales... Agis concrètement pour ta communauté et donne du sens à ton parcours universitaire.</p>
+    <a href="inscription.html?club=Solidarité" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/chess" alt="Club Echecs"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club d'Echecs</h3>
+    <p>Entraîne ta mémoire, ta concentration et ta logique. Participe à des parties amicales ou à des championnats inter-universités.</p>
+    <a href="inscription.html?club=Echecs" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/Développement Personnel.jfif" alt="Développement Personnel"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club de Développement Personnel</h3>
+    <p>Gestion du stress, confiance en soi, prise de parole... Des ateliers pratiques pour devenir la meilleure version de toi-même.</p>
+    <a href="inscription.html?club=Developpement" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/Santé et Environnement.jfif" alt="Santé Environnement"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club Santé et Environnement</h3>
+    <p>Nutrition, sport, écologie et zéro déchet... Adopte un mode de vie sain et engage-toi pour un campus plus vert et responsable.</p>
+    <a href="inscription.html?club=Sante" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/leadership.jfif" alt="Leadership"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club Leadership & Entertainment</h3>
+    <p>Organise des événements, dirige des équipes et développe ton charisme. Le club idéal pour ceux qui veulent apprendre en faisant.</p>
+    <a href="inscription.html?club=Leadership" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/Entrepreneuriat.jfif" alt="Entrepreneuriat"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club d'Entrepreneuriat</h3>
+    <p>Transforme tes idées en projets réels. Business plan, pitch, rencontres avec des entrepreneurs... Lance ta startup dès l'université.</p>
+    <a href="inscription.html?club=Entrepreneuriat" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/E-TEAM.jfif" alt="E-TEAM"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club E-TEAM</h3>
+    <p>Collabore sur des projets digitaux en équipe, développe ton esprit collectif et crée des solutions innovantes avec tes camarades.</p>
+    <a href="inscription.html?club=Eteam" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/digital craft.jfif" alt="Digital Craft"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club Digital Craft</h3>
+    <p>Photoshop, Figma, After Effects... Exprime ta créativité et apprends les outils du design graphique et de la communication digitale.</p>
+    <a href="inscription.html?club=Digital" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/théatre.jfif" alt="Théâtre"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club de Théâtre</h3>
+    <p>Improvisation, répétitions, spectacles sur scène... Libère ta créativité, surmonte ta timidité et vis l'aventure du théâtre en direct.</p>
+    <a href="inscription.html?club=Theatre" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+  <div class="club-card">
+    <div class="img-wrapper">
+      <img src="Images/Oratoire et Débat.jfif" alt="Débat"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      
+    </div>
+    <h3>Club Oratoire et Débat</h3>
+    <p>Apprends à convaincre, à structurer tes idées et à t'exprimer avec assurance. Un atout précieux pour ta vie professionnelle et citoyenne.</p>
+    <a href="inscription.html?club=Debat" class="btn"target="_blank">S'inscrire</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Clubs Universitaires</h3>
+      <p>
+  Rejoins nos clubs et fais partie d'une communauté dynamique. Apprends, partage et évolue avec nous.
+</p>
+
+    </div>
+
+  
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email : contact@university.ma</p>
+      <p>Tél : +212 667700880</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Université - Tous droits réservés</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
