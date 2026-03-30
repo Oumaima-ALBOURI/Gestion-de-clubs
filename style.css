@@ -14,7 +14,7 @@ fieldset{
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #666cb1;
 }
 
 legend{
@@ -22,7 +22,7 @@ legend{
 }
 
 h1{
-    color: #4CAF50;
+    color: #9c71e7;
 }
 
 label{
@@ -38,7 +38,7 @@ input, select, textarea{
 }
 
 input:focus, textarea:focus, select:focus{
-    border-color: #4CAF50;
+    border-color: #6a57d7;
     outline: none;
 }
 
@@ -59,19 +59,136 @@ button{
 }
 
 button[type="submit"]{
-    background-color: #4CAF50;
+    background-color: #5263dd;
     color: white;
 }
 
 button[type="submit"]:hover{
-    background-color: #45a049;
+    background-color: #67ab6a;
 }
 
 button[type="reset"]{
-    background-color: #f44336;
+    background-color: #e17d75;
     color: white;
 }
 
 button[type="reset"]:hover{
-    background-color: #d73833;
+    background-color: #cc4f4b;
+}
+fieldset {
+    background-color: #fff;
+    background-image: url("https://dcassetcdn.com/design_img/2426630/517402/517402_12706012_2426630_6a1b3dfa_image.jpg");
+    background-repeat: no-repeat;
+    background-position: top 20px right 20px; /* لليمين */
+    background-size: 160px; /* كبرنا اللوغو */
+    padding-top: 120px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    form {
+        width: 95%;
+    }
+}
+/* Submit button */
+button[type="submit"] {
+    background: #e681ef;
+    color: white;
+}
+button[type="submit"]:hover {
+    background: #a5249c;
+}
+button[type="submit"]:hover {
+    background: #a5249c;
+}
+
+/* Reset button */
+button[type="reset"] {
+    background: #ff6b6b;
+    color: white;
+}
+/* Buttons general */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* دائرة شوية */
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+button:hover {
+    transform: translateY(-3px); /* يطلع شوية */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Click effect */
+button:active {
+    transform: scale(0.95); /* يصغر شوية */
+}
+
+/* Submit button */
+button[type="submit"] {
+    background: linear-gradient(45deg, #e681ef, #322a77);
+    color: white;
+}
+
+/* Submit hover */
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #495be0, #e681ef);
+}
+
+/* Reset button */
+button[type="reset"] {
+    background: linear-gradient(45deg, #3969da, #7b47a9);
+    color: white;
+}
+
+/* Reset hover */
+button[type="reset"]:hover {
+    background: linear-gradient(45deg, #3740a1, #5c7fe1);
+}
+/* Input focus effect */
+input:focus, textarea:focus, select:focus {
+    border-color: #a5249c;
+    box-shadow: 0 0 8px rgba(165, 36, 156, 0.5);
+    transform: scale(1.02); /* كيكبر شوية */
+    transition: all 0.3s ease;
+}
+
+/* Placeholder effect */
+input::placeholder, textarea::placeholder {
+    color: #999;
+    transition: 0.3s;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    opacity: 0;
+}
+
+/* Hover effect */
+input:hover, textarea:hover, select:hover {
+    border-color: #6a57d7;
+}
+
+/* Animation entrée */
+input, textarea, select {
+    transition: all 0.3s ease;
+}
+
+/* Effet ligne en bas (style moderne) */
+input, textarea {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+}
+
+input:focus, textarea:focus {
+    border-bottom: 2px solid #a5249c;
+}
+
+/* Glow effect léger */
+input:focus {
+    background-color: #faf5ff;
 }
